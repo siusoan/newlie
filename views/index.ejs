@@ -1,0 +1,29 @@
+<% include header %>
+  <main>
+      <div class="introduction">
+          <!--Introduction-->
+          <h2>Digital Corridor is a personal journey in front-end coding.</h2>
+          <p class="discription">Read my posts to discover newly-achieved knowledge and experience :)</p>
+      </div>
+      <div class="about">
+          <!--About section-->
+          <div class="about-1 about-items">
+              <h2><a href="/about-me">about me</a></h2>
+          </div>
+          <div class="about-2 about-items">
+              <h2><a href="/about-ap">about AP</a></h2>
+          </div>
+      </div>
+      <div class="posts">
+          <!--Shortcuts to posts-->
+              <% var teller = 1; %>
+              <% posts.forEach(function(item){ %>
+                <section>
+                    <h3>
+                      <a href=/items/<%- item.id %>><%- item.title %></a>
+                    </h3>
+                </section>
+              <% teller++;}); %>
+      </div>
+   </main>
+<% include footer %>
