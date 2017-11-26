@@ -18,7 +18,7 @@ main {
   grid-column: 1/19;
   height: 70vh;
   background-image: url(../img/banner_cuphead_1920x600.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .spotlight {
@@ -36,11 +36,27 @@ main {
   grid-column: 1/19;
   height: 100vh;
   background: pink;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.popular-column {
+  width: 25%;
+  border: 1px solid red;
 }
 
 .subscribe {
-  grid-column: 3/16;
-  height: 40vh;
+  grid-column: 4/16;
+  height: 65vh;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.subscribe-column {
+  width: 50%;
+  border: 1px solid red;
 }
 
 .item {
@@ -54,10 +70,9 @@ main {
 	transform:skewY(-8deg);
 	position:relative;
 	width:100%;
-	display:grid;
 }
 
-.skew h2 {
+.unskew {
   transform:skewY(8deg);
 }
 
@@ -70,11 +85,23 @@ header {
 }
 
 footer {
-  height: 10vh;
+  height: auto;
   background: #4F4F4F;
+}
+
+.footer-nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-nav div {
+  width: 15%;
+  border:1px solid red;
+}
+
+.copyright {
+  background: #5c5858;
+  padding: 10px;
 }
 
 /*3. HEADINS AND PARAGRAPHS*/
@@ -102,8 +129,8 @@ h3 {
 
 p {
   font-size: 1.2em;
-  color: white;
 }
+
 
 footer p {
   font-size: 0.9em;
